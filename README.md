@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# 使用說明
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+路徑為./test/checkWhichType.sol
+需更改欲測試的合約名稱、合約部署帶入參數
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
