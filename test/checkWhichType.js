@@ -12,10 +12,12 @@ describe("check which type", function () {
     const ERC1155interface = 0xd9b67a26;
     const fallbackInterface = 0xffffffff;
 
+    const [owner, otherAccount] = await ethers.getSigners();
+
     const _theContract = await ethers.getContractFactory("testerc721"); //合約名稱
     const theContract = await _theContract.deploy(); //部署合約參數
 
-    return { theContract, ERC721interface, ERC1155interface, fallbackInterface};
+    return { theContract, ERC721interface, ERC1155interface, fallbackInterface, owner};
   }
 
   describe("test", function () {
@@ -41,7 +43,7 @@ describe("check which type", function () {
       expect(result).to.equal(true);
     });
 
-    it("Is ERC20 ?", async function () {
+    it("Is ERC20/ERC777 ?", async function () {
       const { theContract } = await loadFixture(deployedContract);
       const name = await theContract.name();
       const symbol= await theContract.symbol();
@@ -50,5 +52,6 @@ describe("check which type", function () {
       expect(typeof symbol).to.equal(typeof "String");
       expect(typeof decimals).to.equal(typeof 10);
     });
+
   });
 });
