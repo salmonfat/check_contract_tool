@@ -9,9 +9,21 @@ module.exports = {
         version: "0.8.19",
       },
       {
-        version: "0.4.17",
+        version: "0.4.18",
+      },
+      {
+        version: "0.5.12",
+      },
+      {
+        version: "0.6.12",
       },
     ],
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
   },
   networks: {
     bear: {
