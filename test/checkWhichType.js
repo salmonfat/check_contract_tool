@@ -15,8 +15,8 @@ describe("check which type", function () {
 
     const [owner, otherAccount] = await ethers.getSigners();
 
-    const _theContract = await ethers.getContractFactory("ERC1"); //合約名稱
-    const theContract = await _theContract.deploy("s",5,5,5,5,5); //部署合約參數
+    const _theContract = await ethers.getContractFactory("Zapper_NFT_V2_0_1"); //合約名稱
+    const theContract = await _theContract.deploy("s","s","s",owner.address,owner.address,10); //部署合約參數
 
     return { theContract, ERC721interface, ERC1155interface, AccessControlinterface, fallbackInterface, owner};
   }
