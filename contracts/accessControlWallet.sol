@@ -91,4 +91,12 @@ contract accessControlWallet is AccessControl, Ownable, ReentrancyGuard{
     fallback()external payable{
         emit receiveCoin(msg.sender, msg.value);
     }
+
+
+
+    //test
+
+    function yyy(bytes32 g)public pure returns(uint256){
+        return 2;
+    }
 }
